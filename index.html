@@ -56,29 +56,29 @@
               <span class="mmmu" style="vertical-align: middle">OmniBrainBench</span>
               </h1>
             <h2 class="subtitle is-3 publication-subtitle">
-              A Comprehensive Evaluation of Multi-Modal Large Language Models for Endoscopy Analysis
+              OmniBrainBench: A Comprehensive Multimodal Benchmark for Brain Imaging Analysis Across Multi-stage Clinical Tasks
               <!-- <br> -->
             </h2>
             </h1>
               <div class="is-size-5 publication-authors">
+                <span class="author-block">Zhihao Peng*<sup style="color:#ffac33;">1</sup>,</span><br>
+                <span class="author-block">Cheng Wang*<sup style="color:#ffac33;">,1</sup>,</span>
                 <span class="author-block">Shengyuan Liu*<sup style="color:#ffac33;">1</sup>,</span>
-                <span class="author-block">Boyun Zheng*<sup style="color:#ffac33;">,1</sup>,</span>
-                <span class="author-block">Wenting Chen*<sup style="color:#6fbf73;">2</sup>,</span>
-                <span class="author-block">Zhihao Peng<sup style="color:#ffac33;">1</sup>,</span><br>
-                <span class="author-block">Zhenfei Yin<sup style="color:#ff00f2;">3</sup>,</span>
-                <span class="author-block">Jing Shao<sup style="color:#9b51e0;">4</sup>,</span>
-                <span class="author-block">Jiancong Hu<sup style="color:#ed4b82;">5</sup>,</span>
+                <span class="author-block">Zhiying Liang<sup style="color:#ff00f2;">2</sup>,</span>
+                <span class="author-block">Zanting Ye<sup style="color:#9b51e0;">3</sup>,</span>
+                <span class="author-block">Min Jie Ju<sup style="color:#ed4b82;">4</sup>,</span>
+                <span class="author-block">Peter YM Woo<sup style="color:#ed4b82;">5</sup>,</span>
                 <span class="author-block">Yixuan Yuan<sup style="color:#ffac33;">†,1</sup>,</span>
               </div>
           
               <br>
           
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup style="color:#ffac33;">1</sup>The Chinese University of Hong Kong,</span>
-                <span class="author-block"><sup style="color:#6fbf73;">2</sup>City University of Hong Kong</span>
-                <span class="author-block"><sup style="color:#ff00f2;">3</sup>University of Oxford</span>
-                <span class="author-block"><sup style="color:#9b51e0;">4</sup>Shanghai AI Laboratory,</span>
-                <span class="author-block"><sup style="color:#ed4b82;">5</sup>The Sixth Affiliated Hospital, Sun Yat-sen University</span></br>
+                <span class="author-block"><sup style="color:#ffac33;">1</sup>Department of Electronic Engineering, The Chinese University of Hong Kong</span>
+                <span class="author-block"><sup style="color:#6fbf73;">2</sup>Sun Yat-sen Memorial Hospital, Sun Yat-sen University</span>
+                <span class="author-block"><sup style="color:#ff00f2;">3</sup>School of Biomedical Engineering, Southern Medical University</span>
+                <span class="author-block"><sup style="color:#9b51e0;">4</sup>Zhongshan Hospital, Fudan University</span>
+                <span class="author-block"><sup style="color:#ed4b82;">5</sup>Department of Neurosurgery, Prince of Wales Hospital</span></br>
               </div>
     
               <br>
@@ -113,7 +113,7 @@
 
                 <!-- HF abstract Link -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/Saint-lsy/EndoBench" target="_blank"
+                  <a href="https://huggingface.co/datasets/FrankPN/OmniBrainBench" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span>🤗Hugging Face</span>
                 </a>
@@ -130,7 +130,7 @@
 </section>
 
 <!-- News Section -->
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -141,7 +141,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
   
 <section class="section">
   <div class="container" style="margin-bottom: 2vh;">
@@ -151,7 +151,7 @@
         <h2 class="title is-3">Highlight</h2>
         <div class="content has-text-justified">
           <p>
-            1. We introduce OmniBrainBench, the first comprehensive benchmark specifically designed to evaluate MLLMs across the complete spectrum of endoscopy, covering 4 endoscopic scenarios, 12 specialized tasks with 12 secondary subtasks, and 5 levels of visual prompting granularities.
+            1. We introduce OmniBrainBench, the first comprehensive multimodal benchmark specifically designed to evaluate MLLMs across the complete spectrum of brain imaging analysis with closed- and open-ended evaluations, covering {\textbf{9,527} clinically verified VQA pairs, \textbf{31,706} images, and \textbf{15} modalities}.
           </p>
           <p>
             2. We develop the multi-dimensional evaluation framework that mirrors the clinical workflow progression from basic anatomical recognition to advanced surgical intervention, assessing MLLMs' capabilities across the full spectrum of endoscopic analysis skills.
@@ -174,7 +174,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <img src="static/images/dataset.jpg" alt="OmniBrainBench dataset" class="center">
+          <img src="static/images/OmniBrainBench.png" alt="OmniBrainBench dataset" class="center">
           <p>
             Endoscopic procedures are essential for diagnosing and treating internal diseases, and multi-modal large language models (MLLMs) are increasingly applied to assist in endoscopy analysis. However, current benchmarks are limited, as they typically cover specific endoscopic scenarios and a small set of clinical tasks, failing to capture the real-world diversity of endoscopic modalities and the full range of skills needed in clinical workflows. To address these issues, we introduce OmniBrainBench, the first comprehensive benchmark specifically designed to assess MLLMs across the full spectrum of endoscopic practice with multi-dimensional capacities. OmniBrainBenchencompasses 4 distinct endoscopic modalities, 12 specialized clinical tasks with 12 secondary subtasks, and 5 levels of visual prompting granularities, resulting in 6,832 rigorously validated VQA pairs from 21 diverse datasets. Our multi-dimensional evaluation framework mirrors the clinical workflow—spanning anatomical recognition, lesion analysis, spatial localization, and surgical operations—to holistically gauge the perceptual and diagnostic abilities of MLLMs in realistic scenarios. We benchmark 23 state-of-the-art models, including general-purpose, medical-specialized, and proprietary MLLMs, and establish human clinician performance as a reference standard. Our extensive experiments reveal: (1) proprietary MLLMs outperform open-source and medical-specialized models overall, but still trail human experts; (2) medical-domain supervised fine-tuning substantially boosts task-specific accuracy; and (3) model performance remains sensitive to prompt format and clinical task complexity. OmniBrainBench establishes a new standard for evaluating and advancing MLLMs in endoscopy, highlighting both progress and persistent gaps between current models and expert clinical reasoning.
           </p>
@@ -235,7 +235,7 @@
             this lexical tree, thereby achieving targeted improvements in model performance.
         </p> -->
         <div class="content has-text-centered">
-          <img src="static/images/constrcut pipeline.png" alt="algebraic reasoning"  width="100%"/ class="center">
+          <img src="static/images/OmniBrainBench_construction.png" alt="algebraic reasoning"  width="100%"/ class="center">
           <p> Data construction process of OmniBrainBench, consisting of (a) data collection, (b) QA standardization, and (c) data filtering. Finally, we implement (d) model evaluation on OmniBrainBench. </p>
         </div>
         </div>
@@ -262,8 +262,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-4">Results of different MLLMs on 12 clinical tasks.</h2>
         <div class="content has-text-centered">
-          <img src="static/images/table1.png" alt="algebraic reasoning" width="80%" class="center">
-          <p>Table 1: Results of different MLLMs on 12 clinical tasks in OmniBrainBench. The best-performing model in each category is in-bold, and the second best is underlined.</p>
+          <img src="static/images/OmniBrainBench_closedVQA.png" alt="algebraic reasoning" width="80%" class="center">
+          <p>Table 1: Performance of different MLLMs on five specialized clinical phases with 15 secondary subtasks on closed-ended VQA of OmniBrainBench. The best-performing model in each category is highlighted in bold, and the second best is highlighted in underlined.</p>
         </div>
       </div>
     </div>
@@ -273,8 +273,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-4">Results of different MLLMs on 4 different endoscopy scenarios and 4 different visual prompts.</h2>
         <div class="content has-text-centered">
-          <img src="static/images/table2.png" alt="algebraic reasoning" width="75%" class="center">
-          <p>Table 2: Results of different MLLMs on 4 different endoscopy scenarios and 4 different visual prompts in OmniBrainBench. The best-performing model in each category is in-bold, and the second best is underlined.</p>
+          <img src="static/images/OmniBrainBench_openVQA.png" alt="algebraic reasoning" width="75%" class="center">
+          <p>Table 2: Performance of different MLLMs on open-ended VQA of OmniBrainBench. Higher values indicate better performance in generation quality, semantic similarity, and fluency.</p>
         </div>
       </div>
     </div>
@@ -284,8 +284,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-4">Results of different MLLMs on 12 subtasks in OmniBrainBench.</h2>
         <div class="content has-text-centered">
-          <img src="static/images/table3.png" alt="algebraic reasoning" width="75%" class="center">
-          <p>Table 3: Results of different MLLMs on 12 subtasks in OmniBrainBench.</p>
+          <img src="static/images/OmniBrainBench_analysis_DiffModality.png" alt="algebraic reasoning" width="75%" class="center">
+          <p>Table 3: Diverse Modality Evaluation.</p>
         </div>
       </div>
     </div>
@@ -295,13 +295,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-4">Performance comparison of several leading MLLMs and Clinicians.</h2>
         <div class="content has-text-centered">
-          <img src="static/images/figure2.jpg" alt="algebraic reasoning" width="80%" class="center">
-          <p>Figure 1: Performance comparison of several leading MLLMs and Clinicians.</p>
+          <img src="static/images/OmniBrainBench_analysis_DiffImages.png" alt="algebraic reasoning" width="80%" class="center">
+          <p>Figure 1: Performance of models on different numbers of images.</p>
         </div>
       </div>
     </div>
 
-    <!-- 第四个图 -->
+    <!-- <!-- 第四个图 -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-4">Performance comparison across four major categories.</h2>
@@ -310,9 +310,9 @@
           <p>Figure 2: Performance comparison across 4 major categories in OmniBrainBench among existing MLLMs.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- 第五个图 -->
+    <!-- <!-- 第五个图 -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-4">Performance comparison across four endoscopic scenarios.</h2>
@@ -321,9 +321,9 @@
           <p>Figure 3: Performance comparison across 4 endoscopic scenarios in OmniBrainBench among existing MLLMs.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- 第六个图 -->
+    <!-- <!-- 第六个图 -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-4">Performance comparison across five different visual prompts.</h2>
@@ -332,7 +332,7 @@
           <p>Figure 4: Performance comparison across 5 different visual prompts in OmniBrainBench among existing MLLMs.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </section>
