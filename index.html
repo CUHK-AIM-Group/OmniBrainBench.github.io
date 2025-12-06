@@ -151,13 +151,13 @@
         <h2 class="title is-3">Highlight</h2>
         <div class="content has-text-justified">
           <p>
-            1. We introduce OmniBrainBench, the first comprehensive multimodal benchmark specifically designed to evaluate MLLMs across the complete spectrum of brain imaging analysis with closed- and open-ended evaluations, covering {\textbf{9,527} clinically verified VQA pairs, \textbf{31,706} images, and \textbf{15} modalities}.
+            1. We introduce OmniBrainBench, the first comprehensive multimodal benchmark specifically designed to evaluate MLLMs across the complete spectrum of brain imaging analysis with closed- and open-ended evaluations, covering 9,527 clinically verified VQA pairs, 31,706 images, and 15 modalities.
           </p>
           <p>
-            2. We develop the multi-dimensional evaluation framework that mirrors the clinical workflow progression from basic anatomical recognition to advanced surgical intervention, assessing MLLMs' capabilities across the full spectrum of endoscopic analysis skills.
+            2. We develop a multi-dimensional evaluation framework that mirrors the clinical workflow from anatomical and imaging assessment to therapeutic cycle management, assessing the capabilities of MLLMs across 15 multi-stage clinical tasks within brain imaging analysis.
           </p>
           <p>
-            3. We conduct the extensive comparative evaluation of 23 MLLMs (13 open-source general-purpose, 5 medical-specialized, and 5 proprietary models) against human clinician performance, providing insights into current model capabilities.
+            3. We conduct extensive evaluations of 24 models across open-source general-purpose, medical-specialized, and proprietary MLLMs to reveal critical gaps in their visual-clinical reasoning, providing a detailed analysis of MLLMs in brain imaging.
           </p>
         </div>
       </div>
@@ -176,7 +176,7 @@
         <div class="content has-text-justified">
           <img src="static/images/OmniBrainBench.png" alt="OmniBrainBench dataset" class="center">
           <p>
-            Endoscopic procedures are essential for diagnosing and treating internal diseases, and multi-modal large language models (MLLMs) are increasingly applied to assist in endoscopy analysis. However, current benchmarks are limited, as they typically cover specific endoscopic scenarios and a small set of clinical tasks, failing to capture the real-world diversity of endoscopic modalities and the full range of skills needed in clinical workflows. To address these issues, we introduce OmniBrainBench, the first comprehensive benchmark specifically designed to assess MLLMs across the full spectrum of endoscopic practice with multi-dimensional capacities. OmniBrainBenchencompasses 4 distinct endoscopic modalities, 12 specialized clinical tasks with 12 secondary subtasks, and 5 levels of visual prompting granularities, resulting in 6,832 rigorously validated VQA pairs from 21 diverse datasets. Our multi-dimensional evaluation framework mirrors the clinical workflow—spanning anatomical recognition, lesion analysis, spatial localization, and surgical operations—to holistically gauge the perceptual and diagnostic abilities of MLLMs in realistic scenarios. We benchmark 23 state-of-the-art models, including general-purpose, medical-specialized, and proprietary MLLMs, and establish human clinician performance as a reference standard. Our extensive experiments reveal: (1) proprietary MLLMs outperform open-source and medical-specialized models overall, but still trail human experts; (2) medical-domain supervised fine-tuning substantially boosts task-specific accuracy; and (3) model performance remains sensitive to prompt format and clinical task complexity. OmniBrainBench establishes a new standard for evaluating and advancing MLLMs in endoscopy, highlighting both progress and persistent gaps between current models and expert clinical reasoning.
+            Brain imaging analysis is crucial for diagnosing and treating brain disorders, and multimodal large language models (MLLMs) are increasingly supporting it. However, current brain imaging visual question-answering (VQA) benchmarks either cover a limited number of imaging modalities or are restricted to coarse-grained pathological descriptions, hindering a comprehensive assessment of MLLMs across the full clinical continuum. To address these, we introduce OmniBrainBench, the first comprehensive multimodal VQA benchmark specifically designed to assess the multimodal comprehension capabilities of MLLMs in brain imaging analysis with closed- and open-ended evaluations. OmniBrainBench comprises 15 distinct brain imaging modalities collected from 30 verified medical sources, yielding 9,527 validated VQA pairs and 31,706 images. It simulates clinical workflows and encompasses 15 multi-stage clinical tasks rigorously validated by a professional radiologist. Evaluations of 24 state-of-the-art models, including open-source general-purpose, medical, and proprietary MLLMs, highlight the substantial challenges posed by OmniBrainBench. Experiments reveal that proprietary MLLMs like GPT-5 (63.37%) outperform open-source and medical MLLMs yet lag far behind physicians (91.35%), while medical MLLMs show wide variance in closed- and open-ended VQA. Open-source general-purpose MLLMs generally trail but excel in specific tasks, and all MLLMs fall short in complex preoperative reasoning, revealing a critical visual-to-clinical gap. OmniBrainBench establishes a new standard to assess MLLMs in brain imaging analysis, highlighting the gaps against physicians.
           </p>
         </div>
     </div>
@@ -190,34 +190,34 @@
             <div class="content has-text-centered">
               <img src="static/images/OmniBrainBench_table.png" alt="algebraic reasoning" width="100%"/>
               <p> 
-                Comparisons with existing multi-modal endoscopic benchmarks.
+                Comparisons with existing multimodal brain imaging benchmarks.
               </p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/dataset_statistic.png" alt="arithmetic reasoning" width="80%"/>
+              <img src="static/images/OmniBrainBench_TasksDistribution.png" alt="arithmetic reasoning" width="80%"/>
               <p> 
-                The statistics of OmniBrainBench, showcasing (a) the distribution across 12 clinical tasks and (b) the distribution of 21 public and 1 private datasets (WCE2025).
+                The diverse tasks distributions of OmniBrainBench.
               </p>
             </div>
           </div>
            <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/distribution_sup.jpg" alt="arithmetic reasoning" width="80%"/>
+              <img src="static/images/OmniBrainBench_ModalityDistribution.png" alt="arithmetic reasoning" width="80%"/>
               <p> 
-                Data distribution of the EndoVQA-Instruct dataset..
+                The diverse modality distribution of OmniBrainBench.
               </p>
             </div>
           </div>
-          <!--<div class="box m-5">
+          <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/Statistics4.jpg" alt="arithmetic reasoning" width="80%"/>
+              <img src="static/images/OmniBrainBench_analysis_DiffTasks.png" alt="arithmetic reasoning" width="80%"/>
               <p> 
-                Statistics of the perceptual granularities. * and # denote the case for single choice and multiple choice, respectively.
+                Multi-dimensional evaluation of OmniBrainBench on diverse tasks.
               </p>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -512,7 +512,7 @@
     <div class="column is-8">
       <div class="content">
         <p>
-          This website is website adapted from <a href="https://uni-medical.github.io/GMAI-MMBench.github.io/">GMAI-MMBench</a>, licensed under a <a rel="license"
+          This website is adapted from <a href="https://cuhk-aim-group.github.io/EndoBench.github.io/">EndoBench</a>, licensed under a <a rel="license"
                                               href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
           Commons Attribution-ShareAlike 4.0 International License</a>.
         </p>
