@@ -64,7 +64,7 @@
                 <span class="author-block">Zhihao Peng*<sup style="color:#ffac33;">1</sup>,</span>
                 <span class="author-block">Cheng Wang*<sup style="color:#ffac33;">,1</sup>,</span>
                 <span class="author-block">Shengyuan Liu*<sup style="color:#ffac33;">1</sup>,</span>
-                <span class="author-block">Zhiying Liang<sup style="color:#ff00f2;">2</sup>,</span>
+                <span class="author-block">Zhiying Liang*<sup style="color:#ff00f2;">2</sup>,</span>
                 <span class="author-block">Zanting Ye<sup style="color:#9b51e0;">3</sup>,</span>
                 <span class="author-block">Min Jie Ju<sup style="color:#ed4b82;">4</sup>,</span>
                 <span class="author-block">Peter YM Woo<sup style="color:#ed4b82;">5</sup>,</span>
@@ -344,7 +344,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- 标题 -->
-        <h2 class="title is-3 has-text-centered">Analysis</h2>
+        <h2 class="title is-3 has-text-centered">Analysis of Closed-ended Evaluation</h2>
         
         <!-- Observation 1 -->
         <div class="content has-text-justified">
@@ -370,10 +370,46 @@
           </p>
         </div>
 
-        <!-- Observation 4 -->
+        <!-- 第二个图表 -->
+        <!-- <div class="content has-text-centered my-6">
+          <img src="static/images/figure4.jpg" alt="polyp counting results" width="100%">
+          <p class="mt-3">Figure 6: The influence of visual prompt in lesion quantification task among different MLLMs.</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- 标题 -->
+        <h2 class="title is-3 has-text-centered">Analysis of Open-ended Evaluation</h2>
+        
+        <!-- Observation 1 -->
         <div class="content has-text-justified">
-          <p><b>Observation 4: Open-source MLLMs exhibit far greater performance variance than their proprietary counterparts.</b> While trailblazers like Lingshu claim the top spots across ROUGE1, ROUGEL, and BERTScore, many others—especially medical variants—languish at the bottom, which indicates that the open ecosystem's rapid, decentralized innovation fuels both groundbreaking advances and pronounced instability in model quality.
-          </p> 
+          <p><b>Observation 1: Lingshu series dominate open-source and overall leadership.</b> Lingshu-32B decisively outperforms the much larger HuatuoGPT-V-34B, dominating lexical precision, fluency, and semantic alignment across all key metrics. It indicates that targeted multimodal architecture and data-efficient training now deliver superior generation quality over sheer parameter scale, proving efficiency trumps size in real-world MLLM performance.
+          </p>
+        </div>
+
+        <!-- Observation 2 -->
+        <div class="content has-text-justified">
+          <p><b>Observation 2: Open-source MLLMs exhibit far greater performance variance than their proprietary counterparts.</b> While trailblazers like Lingshu claim the top spots across ROUGE1, ROUGEL, and BERTScore, many others—especially medical variants—languish at the bottom, which indicates that the open ecosystem's rapid, decentralized innovation fuels both groundbreaking advances and pronounced instability in model quality.
+          </p>
+        </div>
+
+        <!-- 图表展示 -->
+        <!-- <div class="content has-text-centered my-6">
+          <img src="static/images/figure3.jpg" alt="error distribution" width="100%">
+          <p class="mt-3">Figure 5: The influence of visual prompt in lesion quantification task among different MLLMs.</p>
+        </div> -->
+
+        <!-- Observation 3 -->
+        <div class="content has-text-justified">
+          <p><b>Observation 3: Proprietary MLLMs are more balanced than open-source MLLMs.</b> Open-source MLLMs surpass proprietary ones in ROUGE1 and BLEU, demonstrating the higher language consistency and fluency and revealing a paradigm shift in efficiency and accessibility.
+          </p>
         </div>
 
         <!-- 第二个图表 -->
@@ -385,7 +421,7 @@
     </div>
   </div>
 </section>
-
+  
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
