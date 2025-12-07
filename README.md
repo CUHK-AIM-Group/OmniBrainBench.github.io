@@ -1,0 +1,1 @@
+OmniBrainBench is specifically designed to assess the multimodal comprehension capabilities of MLLMs for 15 multi-stage clinical tasks in brain imaging analysis with closed- and open-ended evaluations. It comprises 15 distinct brain imaging modalities collected from 30 verified medical sources, yielding 9,527 validated VQA pairs and 31,706 images.
