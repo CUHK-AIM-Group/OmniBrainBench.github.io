@@ -2,32 +2,31 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="OmniBrainBench: the first comprehensive multimodal VQA benchmark for brain imaging analysis across multi-stage clinical tasks — 9,527 verified VQA pairs, 31,706 images, 15 modalities, 24 evaluated MLLMs.">
+  <meta property="og:title" content="OmniBrainBench: A Comprehensive Multimodal Benchmark for Brain Imaging Analysis"/>
+  <meta property="og:description" content="The first comprehensive multimodal VQA benchmark for brain imaging analysis across multi-stage clinical tasks."/>
+  <meta property="og:url" content="https://cuhk-aim-group.github.io/OmniBrainBench.github.io/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/OmniBrainBench.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="OmniBrainBench: A Comprehensive Multimodal Benchmark for Brain Imaging Analysis">
+  <meta name="twitter:description" content="The first comprehensive multimodal VQA benchmark for brain imaging analysis across multi-stage clinical tasks.">
+  <meta name="twitter:image" content="static/images/OmniBrainBench.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="OmniBrainBench, brain imaging, medical VQA, multimodal benchmark, MLLM, medical AI, neuroimaging, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
   <title>OmniBrainBench</title>
   <link rel="icon" type="image/x-icon" href="static/images/OmniBrainBench_icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+
+  <!-- Medea-style fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -36,6 +35,8 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <!-- Dark Medea-style theme — must load last to override Bulma -->
+  <link rel="stylesheet" href="static/css/medea.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -46,6 +47,25 @@
 </head>
 <body>
 
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="nav">
+    <a class="nav__brand" href="#top">
+      <img src="static/images/OmniBrainBench_icon.png" alt="OmniBrainBench logo"/>
+      <span>OmniBrainBench</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <div class="nav__links" id="navLinks">
+      <a href="#highlight">Highlight</a>
+      <a href="#abstract">Abstract</a>
+      <a href="#construction">Construction</a>
+      <a href="#results">Results</a>
+      <a href="#case-study">Case Study</a>
+      <a href="#citation">Citation</a>
+      <a href="https://github.com/CUHK-AIM-Group/OmniBrainBench" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </nav>
+
+  <span id="top"></span>
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -122,6 +142,15 @@
                 </a>
               </span>
             </div>
+
+            <!-- Hero stat chips -->
+            <div class="hero-stats">
+              <div class="stat-chip"><div class="num">9,527</div><div class="label">VQA Pairs</div></div>
+              <div class="stat-chip"><div class="num">31,706</div><div class="label">Images</div></div>
+              <div class="stat-chip"><div class="num">15</div><div class="label">Modalities</div></div>
+              <div class="stat-chip"><div class="num">15</div><div class="label">Clinical Tasks</div></div>
+              <div class="stat-chip"><div class="num">24</div><div class="label">MLLMs Evaluated</div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -130,7 +159,7 @@
 </section>
 
 <!-- News Section -->
-<!-- <section class="section">
+<!-- <section class="section reveal">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -143,23 +172,23 @@
   </div>
 </section> -->
   
-<section class="section">
+<section class="section reveal" id="highlight">
   <div class="container" style="margin-bottom: 2vh;">
     <!-- Highlight. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">   
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Highlight</h2>
-        <div class="content has-text-justified">
-          <p>
-            1. We introduce OmniBrainBench, the first comprehensive multimodal benchmark specifically designed to evaluate MLLMs across the complete spectrum of brain imaging analysis with closed- and open-ended evaluations, covering 9,527 clinically verified VQA pairs, 31,706 images, and 15 modalities.
-          </p>
-          <p>
-            2. We develop a multi-dimensional evaluation framework that mirrors the clinical workflow from anatomical and imaging assessment to therapeutic cycle management, assessing the capabilities of MLLMs across 15 multi-stage clinical tasks within brain imaging analysis.
-          </p>
-          <p>
-            3. We conduct extensive evaluations of 24 models across open-source general-purpose, medical-specialized, and proprietary MLLMs to reveal critical gaps in their visual-clinical reasoning, providing a detailed analysis of MLLMs in brain imaging.
-          </p>
-        </div>
+      </div>
+    </div>
+    <div class="highlight-grid">
+      <div class="highlight-card" data-n="1">
+        <p>We introduce <b>OmniBrainBench</b>, the first comprehensive multimodal benchmark specifically designed to evaluate MLLMs across the complete spectrum of brain imaging analysis with closed- and open-ended evaluations, covering <b>9,527</b> clinically verified VQA pairs, <b>31,706</b> images, and <b>15</b> modalities.</p>
+      </div>
+      <div class="highlight-card" data-n="2">
+        <p>We develop a <b>multi-dimensional evaluation framework</b> that mirrors the clinical workflow from anatomical and imaging assessment to therapeutic cycle management, assessing the capabilities of MLLMs across <b>15 multi-stage clinical tasks</b> within brain imaging analysis.</p>
+      </div>
+      <div class="highlight-card" data-n="3">
+        <p>We conduct extensive evaluations of <b>24 models</b> across open-source general-purpose, medical-specialized, and proprietary MLLMs to reveal critical gaps in their visual-clinical reasoning, providing a detailed analysis of MLLMs in brain imaging.</p>
       </div>
     </div>
     <!--/ Highlight. -->
@@ -168,7 +197,7 @@
 </div>
 </section>
 
-<section class="section">
+<section class="section reveal" id="abstract">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -222,7 +251,7 @@
       </div>
     </div>
 
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered" id="construction">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Construction Process</h2>
         <!-- <div class="content has-text-justified">
@@ -248,7 +277,7 @@
 <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
 <!-- RESULTS SECTION -->
 <!-- 第一部分：仅标题使用 hero 组件并保留灰色背景 -->
-<section class="hero is-light is-small">
+<section class="hero is-light is-small" id="results">
   <div class="hero-body has-text-centered">
     <h1 class="title is-3 mmmu">Experiment Results</h1>
   </div>
@@ -258,7 +287,7 @@
 
 
 <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
-<section class="section">
+<section class="section reveal">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -319,7 +348,7 @@
 </section>
 
 
-<section class="section">
+<section class="section reveal">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -374,7 +403,7 @@
 
 
 <!-- 第二部分：后续内容移出 hero，使用普通 section 或 div -->
-<section class="section">
+<section class="section reveal">
   <div class="container">
     
 
@@ -438,7 +467,7 @@
 </section>
   
   
-<section class="section">
+<section class="section reveal" id="case-study">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -557,6 +586,31 @@
   </div>
 </section>
 
+<!-- ===================== CITATION ===================== -->
+<section class="section reveal" id="citation">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Citation</h2>
+        <p class="content" style="margin-bottom:1.2rem;">If you find OmniBrainBench useful for your research, please cite our paper:</p>
+        <div class="citation-block">
+          <button class="copy-btn" id="copyCite" aria-label="Copy citation">
+            <i class="far fa-copy"></i><span>Copy</span>
+          </button>
+          <pre id="citeText">@article{peng2025omnibrainbench,
+  title   = {OmniBrainBench: A Comprehensive Multimodal Benchmark for Brain
+             Imaging Analysis Across Multi-stage Clinical Tasks},
+  author  = {Peng, Zhihao and Wang, Cheng and Liu, Shengyuan and Liang, Zhiying
+             and Ye, Zanting and Ju, Min Jie and Woo, Peter Y. M. and Yuan, Yixuan},
+  journal = {arXiv preprint arXiv:2511.00846},
+  year    = {2025}
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="columns is-centered">
     <div class="column is-8">
@@ -570,3 +624,69 @@
     </div>
   </div>
 </footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+(function () {
+  // Mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') links.classList.remove('open');
+    });
+  }
+
+  // Scroll reveal
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Back to top
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 600) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  });
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Copy citation
+  var copyBtn = document.getElementById('copyCite');
+  var citeText = document.getElementById('citeText');
+  if (copyBtn && citeText) {
+    copyBtn.addEventListener('click', function () {
+      var text = citeText.innerText;
+      var done = function () {
+        copyBtn.classList.add('copied');
+        copyBtn.querySelector('span').textContent = 'Copied!';
+        setTimeout(function () {
+          copyBtn.classList.remove('copied');
+          copyBtn.querySelector('span').textContent = 'Copy';
+        }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta); done();
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
