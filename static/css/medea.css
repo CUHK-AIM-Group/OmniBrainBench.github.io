@@ -201,66 +201,6 @@ a:hover { color: #93c5fd; }
 }
 .stat-chip .label { font-size: .78rem; color: var(--text-2); text-transform: uppercase; letter-spacing: .06em; }
 
-/* ---- Hero two-column split (text + brain) ---- */
-.hero-split { align-items: center; }
-.hero-text { text-align: center; }
-.hero-text .hero-stats { justify-content: center; }
-
-.hero-brain {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#brainBox {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto;
-  cursor: grab;
-}
-#brainBox:active { cursor: grabbing; }
-#brainBox canvas { display: block; width: 100% !important; height: 100% !important; }
-/* canvas images must NOT get the white matte applied to content imgs */
-#brainBox img {
-  background: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-.brain-hint {
-  margin-top: .4rem;
-  font-size: .78rem;
-  color: var(--text-2);
-  font-family: var(--font-sans);
-  letter-spacing: .04em;
-}
-#brainTip {
-  position: absolute;
-  transform: translate(-50%, -140%);
-  pointer-events: none;
-  background: rgba(2, 6, 23, 0.92);
-  border: 1px solid var(--accent-blue);
-  color: var(--text-0);
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  padding: .25rem .55rem;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity .15s ease;
-  z-index: 5;
-}
-#brainTip.show { opacity: 1; }
-
-@media (max-width: 768px) {
-  /* brain moves above the text on mobile */
-  .hero-split { flex-direction: column-reverse; display: flex; }
-  #brainBox { max-width: 300px; }
-}
-
 
 /* =========================================================================
    SECTION TITLES
