@@ -44,6 +44,17 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- Locally hosted three.js (no CDN) for the procedural brain -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./static/js/three/three.module.js",
+      "three/addons/": "./static/js/three/addons/"
+    }
+  }
+  </script>
+  <script type="module" src="static/js/brain.js"></script>
 </head>
 <body>
 
@@ -69,8 +80,8 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
+        <div class="columns is-vcentered hero-split">
+          <div class="column has-text-centered hero-text">
             <h1 class="title is-1 publication-title">
               <img src="static/images/OmniBrainBench_icon.png" style="width:1em;vertical-align: middle" alt="Logo"/> 
               <span class="mmmu" style="vertical-align: middle">OmniBrainBench</span>
@@ -152,10 +163,18 @@
               <div class="stat-chip"><div class="num">24</div><div class="label">MLLMs Evaluated</div></div>
             </div>
           </div>
+          </div><!-- /.hero-text -->
+
+          <!-- Procedural glowing brain -->
+          <div class="column hero-brain">
+            <div id="brainBox" aria-label="Animated brain visualization">
+              <div id="brainTip"></div>
+            </div>
+            <p class="brain-hint">Drag to rotate · hover the tracts</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <!-- News Section -->
